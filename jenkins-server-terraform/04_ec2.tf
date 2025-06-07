@@ -19,6 +19,8 @@ resource "aws_instance" "ec2" {
   
   # IAM instance profile to attach policies to the EC2 instance
   iam_instance_profile   = aws_iam_instance_profile.instance-profile.name
+
+  associate_public_ip_address = true
   
   # Root block device configuration, setting the volume size to 30 GB
   root_block_device {
